@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700&display=swap');
 
 .main_container{
-    width: 60%;
+    width: 100%;
     position: relative;
     margin: 100px 0;
     font-family: "Roboto";
@@ -15,12 +15,27 @@
             overflow: hidden;
             width: 100%;
             height: 50vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             *{
+                object-position: center;
                 object-fit: cover;
                 margin: auto;
-                width: 100%;
                 height: 50vh;
+                transition: all 0.3s ease-in-out;
+                -webkit-transition: all 0.3s ease-in-out;
+                -moz-transition: all 0.3s ease-in-out;
+                -ms-transition: all 0.3s ease-in-out;
+                -o-transition: all 0.3s ease-in-out;
             }
+        }
+        .img_container:hover img{
+            transform: scale(1.3);
+            -webkit-transform: scale(1.3);
+            -moz-transform: scale(1.3);
+            -ms-transform: scale(1.3);
+            -o-transform: scale(1.3);
         }
         .essientials_contianer{
             position: absolute;

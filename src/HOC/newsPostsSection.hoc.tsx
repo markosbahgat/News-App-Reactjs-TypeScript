@@ -7,8 +7,8 @@ interface Props extends HTMLProps<HTMLDivElement>{}
 export const SectionTwo: React.FC = (props: Props) => {
     const {principle, loading} = usePosts();
     return (
-        <div>
-        {principle?.articles.map(article => {
+        <div id='MainPosts'>
+        {principle?.articles.slice(0, 15).map(article => {
             const PostProps = {
                 imgUrl:article.urlToImage,
                 title: article.title,
@@ -16,7 +16,7 @@ export const SectionTwo: React.FC = (props: Props) => {
                 date:article.publishedAt.slice(0, 10),
                 postUrl:article.url,
             }
-             return <MainPost {...PostProps} key={article.publishedAt}/>
+             return article.urlToImage && <MainPost {...PostProps} key={article.publishedAt}/>
         })}
     </div>
   )

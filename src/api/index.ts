@@ -1,1 +1,1 @@
-export {GetPostsApi} from './posts.api'
+export {GetMainPostsApi} from './mainPosts.api'

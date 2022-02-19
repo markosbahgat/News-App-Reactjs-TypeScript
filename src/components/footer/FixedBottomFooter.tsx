@@ -13,7 +13,7 @@ const FixedBottomFooter: React.FC<Props> = (props) => {
       <div className="top">
         <div className="logo-details">
           <i className="fab fa-slack"></i>
-          <span className="logo_name">CodingLab</span>
+          <span className="logo_name">News Website</span>
         </div>
         <div className="media-icons">
           <a href="#"><i className="fab fa-facebook-f"></i></a>

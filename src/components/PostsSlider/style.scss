@@ -12,6 +12,8 @@
 */
 .swiper{
   width: 970px;
+  margin-top: 100px;
+  margin-bottom: 150px;
 }
 
 .card{
@@ -20,6 +22,7 @@
   border-radius: 20px;
   margin: 20px 0;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  padding: 0 0 30px 0;
 }
 
 .card::before{
@@ -27,39 +30,44 @@
   position: absolute;
   height: 40%;
   width: 100%;
-  background: #7d2ae8;
+  background: rgb(0, 185, 185);
   border-radius: 20px 20px 0 0;
   left: 0;
   top: 0;
+  -webkit-border-radius: 20px 20px 0 0;
+  -moz-border-radius: 20px 20px 0 0;
+  -ms-border-radius: 20px 20px 0 0;
+  -o-border-radius: 20px 20px 0 0;
 }
 
 .card .card-content{
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 30px;
   position: relative;
   z-index: 100;
+  overflow: hidden;
 }
 
 .card .image{
   display: block;
   position: relative;
-  height: 140px;
-  width: 140px;
-  border-radius: 50%;
-  padding: 3px;
-  background: #7d2ae8;
+  height: 240px;
+  width: 100%;
   overflow: hidden;
 }
 
 .card .image img{
-  height: 100%;
   width: 100%;
+  height: 100%;
   object-fit: cover;
-  border-radius: 50%;
   border: 3px solid #fff;
   overflow: hidden;
+  border-radius: 20px 20px 0 0;
+  -webkit-border-radius: 20px 20px 0 0;
+  -moz-border-radius: 20px 20px 0 0;
+  -ms-border-radius: 20px 20px 0 0;
+  -o-border-radius: 20px 20px 0 0;
   
 }
 
@@ -84,16 +92,13 @@
   opacity: 1;
 }
 
-.card .name-profession{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 10px;
-  color: black;
-} 
 
-.name-profession .name{
-  font-size: 20px;
+
+ .name{
+  padding: 10px 10px;
+  color: black;
+  margin-top: 10px;
+  font-size: 16px;
   font-weight: 600;
 }
 
@@ -131,6 +136,13 @@
   font-size: 14px;
   transition: all 0.3s ease;
   cursor: pointer;
+  a{
+    text-decoration: none;
+    color: white;
+  }
+}
+.card .button button:first-child{
+  background-color: rgb(0, 185, 185);
 }
 
 .button button:hover{
@@ -152,11 +164,11 @@
 
 .swiper-button-next, .swiper-button-prev{
   opacity: 0.7;
-  color: #7d2ae8;
+  color: rgb(0, 185, 185) !important;
   transition: all 0.3s ease;
-
+  
 }
 .swiper-button-next:hover, .swiper-button-prev:hover{
   opacity: 1;
-  color: #7d2ae8;
+  color: #7d2ae8 !important;
 }

@@ -29,6 +29,12 @@ const ImageSlider: React.FC<Props> = () => {
     useEffect(() => {
         Slider();
     }, []);
+    const handleScroll = () => {
+        window.scrollTo({
+            top:1600,
+            behavior:"smooth"
+        })
+    }
     return ( 
         <div className="banner">
             <div className="slider">
@@ -38,7 +44,10 @@ const ImageSlider: React.FC<Props> = () => {
                 <div className="navbar">
                     <NavBar LogoName={EWebsiteDetails.webstieName}/>
                 </div>
-                <div className="content">
+                <div className="slideShow_content">
+                    <h1>News Website</h1>
+                    <span>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequatur consequuntur ullam illo. Aliquid, nam incidunt saepe iure quo ipsum..!!</span>
+                    <a onClick={() => handleScroll()}>Explore Latest News</a>
                 </div>
             </div>
         </div>

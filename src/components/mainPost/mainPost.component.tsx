@@ -11,7 +11,6 @@ interface Props extends HTMLProps<HTMLDivElement>{
 
 const MainPost: React.FC<Props> = ({imgUrl, title, description, date, postUrl}) => {
   return (
-    <div>
         <div className="main_container">
             <div className="main_img_container">
                 <div className='img_container'>
@@ -30,7 +29,6 @@ const MainPost: React.FC<Props> = ({imgUrl, title, description, date, postUrl}) 
             </div>
             <hr className="line_break" />
         </div>
-    </div>
   )
 }
 

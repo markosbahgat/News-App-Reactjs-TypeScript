@@ -1,19 +1,19 @@
 import {useState, useEffect} from 'react';
 import { IPostOptions } from '../models/interfaces/postOptions.interface';
-import { GetMainPostsApi } from '../api/mainPosts.api';
+import { GetCardPostsApi } from '../api/cardPosts.api';
 import { INews } from '../models/interfaces/news.interface';
 
 
-export const usePosts = () => {
+export const useCardPosts = () => {
     const [loading, setLoading] = useState<boolean>(false);
     const [error, setError] = useState<Error | null>();
     const [principle, setPrinciple] = useState<INews | null>()
 
-    const GetPosts =  async (PostsOption?: IPostOptions) => {
+    const GetCardPosts =  async (searchQuery: IPostOptions["query"]) => {
         setLoading(true);
         setError(null);
         try{
-            const response: INews | undefined = await GetMainPostsApi(PostsOption);
+            const response: INews | undefined = await GetCardPostsApi(searchQuery);
             setPrinciple(response);
         }
         catch (error: any){
@@ -22,12 +22,12 @@ export const usePosts = () => {
         }
     }
     useEffect(() => {
-        GetPosts();
+        GetCardPosts("technology");
     }, [])
     return { 
         loading,
         error,
         principle,
-        GetPosts
+        GetCardPosts
     }
 }
